@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next",
     "start": "next start",
-    "build": "node ./scripts/gen-rss.js && next build"
+    "build": "next build"
   },
   "author": "Philipp Steinrötter",
   "license": "MIT",
