@@ -12,8 +12,15 @@ export default {
         <meta property="og:type" content="website" />
         <meta property="og:title" content={meta.title} />
         <meta property="og:description" content={meta.description} />
-        <meta property="og:url" content={meta.image} />
-        <meta property="twitter:card" content="summary" />
+        <meta property="og:url" content="https://philipp.steinroetter.com" />
+        <meta
+          property="og:image"
+          content={meta.image || 'https://philipp.steinroetter.com/logo.png'}
+        />
+        <meta
+          property="twitter:card"
+          content={meta.image ? 'summary_large_image' : 'summary'}
+        />
         <meta property="twitter:site" content="@psteinroe" />
         <meta property="twitter:title" content={meta.title} />
         <meta property="twitter:description" content={meta.description} />
@@ -21,7 +28,10 @@ export default {
           property="twitter:url"
           content="https://philipp.steinroetter.com"
         />
-        <meta property="twitter:image" content={meta.image} />
+        <meta
+          property="twitter:image"
+          content={meta.image || 'https://philipp.steinroetter.com/logo.png'}
+        />
       </>
     )
   },
