@@ -12,13 +12,16 @@ export default {
         <meta property="og:type" content="website" />
         <meta property="og:title" content={meta.title} />
         <meta property="og:description" content={meta.description} />
-        <meta property="og:url" content="https://philipp.steinroetter.com" />
+        <meta property="og:url" content={meta.image} />
         <meta property="twitter:card" content="summary" />
         <meta property="twitter:site" content="@psteinroe" />
         <meta property="twitter:title" content={meta.title} />
         <meta property="twitter:description" content={meta.description} />
-        <meta property="twitter:url" content="https://philipp.steinroetter.com" />
-        <meta property="twitter:image" content="https://philipp.steinroetter.com/logo.png" />
+        <meta
+          property="twitter:url"
+          content="https://philipp.steinroetter.com"
+        />
+        <meta property="twitter:image" content={meta.image} />
       </>
     )
   },
@@ -27,16 +30,16 @@ export default {
       <hr />
       <a href="https://twitter.com/psteinroe" target="_blank">
         Twitter
-      </a>{" "}
-      ·{" "}
+      </a>{' '}
+      ·{' '}
       <a href="https://github.com/psteinroe" target="_blank">
         GitHub
-      </a>{" "}
-      ·{" "}
+      </a>{' '}
+      ·{' '}
       <a href="mailto:philipp@steinroetter.com" target="_blank">
         philipp@steinroetter.com
       </a>
-      <small style={{ display: "block", marginTop: "8rem" }}>
+      <small style={{ display: 'block', marginTop: '8rem' }}>
         <time>{YEAR}</time> © Philipp Steinrötter.
         <a href="/feed.xml">RSS</a>
         <style jsx>{`
