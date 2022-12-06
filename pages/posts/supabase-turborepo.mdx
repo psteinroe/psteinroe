@@ -160,9 +160,9 @@ First, add a `generate` script to the respective `package.json`.
 }
 ```
 
-The script first changes into the root directory before running the type generation. All types are written into a `database.ts` file of the same package. Finally, the generated types are formattedusing prettier.
+The script first changes into the root directory before running the type generation. All types are written into a `database.ts` file of the same package. Finally, the generated types are formatted using prettier.
 
-You might have noticed that the `--local` flag is used. To ensure you have a Supabase intance running, configure the `generate` task similar to the `test` and `lint` tasks within the `turbo.json` file:
+You might have noticed that the `--local` flag is used. To ensure you have a Supabase instance running, configure the `generate` task similar to the `test` and `lint` tasks within the `turbo.json` file:
 
 ```json
 {
@@ -181,6 +181,6 @@ You might have noticed that the `--local` flag is used. To ensure you have a Sup
 }
 ```
 
-If you now run `pnpm run generate`, the types will be generated using a locally started Supabase instances.
+If you now run `pnpm run generate`, and Turborepo will make sure you have a Supabase instance running before the types are generated.
 
 Thanks for reading!
