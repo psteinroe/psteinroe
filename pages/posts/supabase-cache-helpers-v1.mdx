@@ -59,7 +59,7 @@ function ContactCard({ contactId }: { contactId: string }) {
 }
 ```
 
-But its a lot of boilerplate, right? And as a developer, you have little transparency on the actual query being executed when looking at the `ContactNote` component. In our organisation, we found this intransparency to be the source of performance issue and bugs, because people tend to avoid writing a new hook, and just overload that one query with all the column, filters and joins they need. This becomes worse when the size and complexity of your app grows. Imagine a complex table view, that allows the user to apply a bunch of filters and ordering. For proper caching, you will need to provide filter object in your hook, and encode the query settings into the key. The maintainability will decrease to zero at some point.
+But its a lot of boilerplate, right? And as a developer, you have little transparency on the actual query being executed when looking at the `ContactNote` component. In our organisation, we found this intransparency to be the source of performance issue and bugs, because people tend to avoid writing a new hook, and just overload that one query with all the column, filters and joins they need. This becomes worse when the size and complexity of your app grows. Imagine a complex table view, that allows the user to apply a bunch of filters and ordering. For proper caching, you will need to pass filter object into your hook, and encode the query settings into the key. The maintainability will decrease to zero at some point.
 
 The same is true for muations. It is simple at first. Just define your fetcher, and pass it to the `useMutation` hook:
 
@@ -177,7 +177,7 @@ const { trigger } = useUpsertMutation(
 )
 ```
 
-To auto-populate the data the same way the custom code above does, knowledge about the required paths, and applied filters of the query is leveraged to ensure that the mutated data is still a valid member of the query. For example, a contact should only be inserted into the cache of the following query, if its ticket number is less than 100, and if t defines values for `id` and `username`.
+To auto-populate the data the same way the custom code above does, knowledge about the required paths, and applied filters of the query is leveraged to ensure that the mutated data is still a valid member of the query. For example, a contact should only be inserted into the cache of the following query, if its ticket number is less than 100, and if it defines values for `id` and `username`.
 
 ```tsx
 const { data, error } = useQuery(
