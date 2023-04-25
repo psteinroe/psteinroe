@@ -11,14 +11,15 @@
   "author": "Philipp Steinrötter",
   "license": "MIT",
   "dependencies": {
+    "@vercel/analytics": "^1.0.0",
+    "@vercel/og": "0.0.21",
     "gray-matter": "^4.0.2",
     "next": "^13.0.6",
     "nextra": "^2.0.1",
     "nextra-theme-blog": "^2.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "rss": "^1.2.2",
-    "@vercel/og": "0.0.21"
+    "rss": "^1.2.2"
   },
   "devDependencies": {
     "@types/node": "18.11.11",
