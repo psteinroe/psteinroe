@@ -8,7 +8,7 @@ specifiers:
   next: ^13.0.6
   nextra: ^2.0.1
   nextra-theme-blog: ^2.0.1
-  prettier: ^2.0.5
+  prettier: ^3.0.0
   react: ^18.2.0
   react-dom: ^18.2.0
   rss: ^1.2.2
@@ -27,7 +27,7 @@ dependencies:
 
 devDependencies:
   '@types/node': 18.11.11
-  prettier: 2.7.1
+  prettier: 3.0.0
   typescript: 4.9.3
 
 packages:
@@ -1540,9 +1540,9 @@ packages:
       source-map-js: 1.0.2
     dev: false
 
-  /prettier/2.7.1:
-    resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
-    engines: {node: '>=10.13.0'}
+  /prettier/3.0.0:
+    resolution: {integrity: sha512-zBf5eHpwHOGPC47h0zrPyNn+eAEIdEzfywMoYn2XPi0P44Zp0tSq64rq0xAREh4auw2cJZHo9QUob+NqCQky4g==}
+    engines: {node: '>=14'}
     hasBin: true
     dev: true
 
