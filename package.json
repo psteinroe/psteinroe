@@ -15,8 +15,8 @@
     "@vercel/og": "0.0.21",
     "gray-matter": "^4.0.2",
     "next": "^13.0.6",
-    "nextra": "^2.0.1",
-    "nextra-theme-blog": "^2.0.1",
+    "nextra": "^4.0.0",
+    "nextra-theme-blog": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rss": "^1.2.2"
