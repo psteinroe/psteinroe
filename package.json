@@ -12,7 +12,7 @@
   "license": "MIT",
   "dependencies": {
     "@vercel/analytics": "^1.0.0",
-    "@vercel/og": "0.0.21",
+    "@vercel/og": "0.6.5",
     "gray-matter": "^4.0.2",
     "next": "^13.0.6",
     "nextra": "^2.0.1",
