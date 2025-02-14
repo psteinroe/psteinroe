@@ -22,7 +22,7 @@
     "rss": "^1.2.2"
   },
   "devDependencies": {
-    "@types/node": "18.11.11",
+    "@types/node": "18.19.76",
     "prettier": "^2.0.5",
     "typescript": "4.9.3"
   },
