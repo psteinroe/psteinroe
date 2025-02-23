@@ -1,6 +1,6 @@
 baseURL = "https://philipp.steinroetter.com"
 languageCode = "en-En"
-theme = "anubis2"
+theme = "PaperMod"
 title = "Philipp Steinrötter"
 
 [params]
@@ -15,9 +15,9 @@ social = [
     { id = "bluesky", url = "https://bsky.app/profile/psteinroe.com" }
 ]
 
-# [homeInfoParams]
-# Title =  "Hi there wave"
-# Content = "Can be Info, links, about..."
+[homeInfoParams]
+Title =  "Hi there wave"
+Content = "Can be Info, links, about..."
 
 [[menu.main]]
 name = "Home"
