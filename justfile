@@ -1,4 +1,4 @@
 # Run dev server
 dev:
-    hugo server -D
+    hugo server -D --ignoreCache --disableFastRender -F
 

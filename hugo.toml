@@ -6,7 +6,6 @@ title = "Philipp Steinrötter"
 [params]
 description = "Full-Stack Developer and Entrepreneur"
 dateFormat = "2006-01-02"
-paginationSinglePost = true
 
 social = [
     { id = "github", url = "https://github.com/psteinroe" },

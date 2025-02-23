@@ -1,6 +1,7 @@
 ---
 title: Build A Public API with Supabase in 10 Minutes
 date: 2024-04-20
+draft: false
 description: A guide to expose parts of your PostgREST API to your users
 author: psteinroe
 ---
