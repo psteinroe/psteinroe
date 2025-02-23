@@ -7,6 +7,7 @@ title = "Philipp Steinrötter"
 description = "Full-Stack Developer and Entrepreneur"
 dateFormat = "2006-01-02"
 readMore = false
+paginationSinglePost = true
 
 social = [
     { id = "github", url = "https://github.com/psteinroe" },
@@ -37,5 +38,5 @@ unsafe = true # true | false; Enable unsafe mode to have a better experience
 style = 'base16-snazzy' # Highlight.js style
 
 [pagination]
-pagerSize = 5
+pagerSize = 1
 
