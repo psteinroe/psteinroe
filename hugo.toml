@@ -12,9 +12,8 @@ social = [
     { id = "github", url = "https://github.com/psteinroe" },
     { id = "email", url = "philipp@steinroetter.com" },
     { id = "x", url = "https://x.com/psteinroe" },
-    { id = "bluesky", url = "https://bsky.app/psteinroe" }
+    { id = "bluesky", url = "https://bsky.app/profile/psteinroe.com" }
 ]
-
 
 [params.author]
 name = "psteinroe"
