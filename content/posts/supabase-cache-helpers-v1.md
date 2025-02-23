@@ -4,7 +4,6 @@ date: 2023-04-25
 draft: false
 description: SWR and React Query Wrappers for Supabase
 author: psteinroe
-tags: ["Supabase", "Cache Helpers"]
 ---
 
 [Supabase Cache Helpers](https://supabase-cache-helpers.vercel.app) is a collection of framework specific cache utilities for working with [Supabase](https://supabase.com). It bridges the gap between data-fetching libraries such as [SWR](https://swr.vercel.app) and [React Query](https://tanstack.com/query/v3/docs/react/overview), and the Supabase client libraries.
