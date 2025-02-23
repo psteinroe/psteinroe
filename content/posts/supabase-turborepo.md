@@ -4,7 +4,7 @@ date: 2022-12-06
 draft: false
 description: A guide to setting up a pnpm monorepo with Supabase and Turborepo
 author: psteinroe
-image: https://philipp.steinroetter.com/api/og?title=Set up a monorepo with Supabase and Turborepo
+tags: ["Supabase", "Turborepo"]
 ---
 
 At my current company, we recently migrated our codebase to a [turborepo](https://turbo.build/repo)-powered [pnpm](https://pnpm.io) monorepo, and are now shipping three NextJS apps, a Preact widget, a React Native app and two Fastify servers out of a single repository, all speaking to the same Supabase instance. A monorepo setup not only allows us to share code and configurations, but also decreases ci time and thereby saves $$. It took me a few attempts to properly integrate Supabase with Turborepo, and here is a quick rundown of what I've learned setting up the monorepo.

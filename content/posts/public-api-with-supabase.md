@@ -4,6 +4,7 @@ date: 2024-04-20
 draft: false
 description: A guide to expose parts of your PostgREST API to your users
 author: psteinroe
+tags: ["Supabase", "Public API"]
 ---
 
 Building with Supabase means most likely you are not buildig your API yourself thanks to PostgREST and the GraphQL extension. But what if your customers want a public API to integrate with your product? Instead of building your own API server from scratch, you can leverage Postgres + PostgREST to build a public API in minutes. This blog post walks you through the required steps. The target architecture is very simple: A custom database role and Row-Level-Security, your PostgREST server, and a proxy that adds rate-limiting and observability, and a few additional security measures.

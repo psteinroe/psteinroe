@@ -15,6 +15,20 @@ social = [
     { id = "bluesky", url = "https://bsky.app/profile/psteinroe.com" }
 ]
 
+# [homeInfoParams]
+# Title =  "Hi there wave"
+# Content = "Can be Info, links, about..."
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "Posts"
+url = "/posts"
+weight = 2
+
 [params.author]
 name = "psteinroe"
 email  = "philipp@steinroetter.com"
@@ -29,12 +43,3 @@ style = 'base16-snazzy' # Highlight.js style
 [pagination]
 pagerSize = 5
 
-[[menu.main]]
-name = "Home"
-url = "/"
-weight = 1
-
-[[menu.main]]
-name = "Posts"
-url = "/posts/"
-weight = 2
