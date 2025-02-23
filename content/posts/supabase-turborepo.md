@@ -1,6 +1,6 @@
 ---
 title: Set up a monorepo with Supabase and Turborepo
-date: 2022/12/06
+date: 2022-12-06
 description: A guide to setting up a pnpm monorepo with Supabase and Turborepo
 author: psteinroe
 image: https://philipp.steinroetter.com/api/og?title=Set up a monorepo with Supabase and Turborepo

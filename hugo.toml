@@ -1,0 +1,41 @@
+baseURL = "https://psteinroe.de/"
+languageCode = "en-En"
+theme = "anubis2"
+title = "Philipp Steinrötter"
+
+[params]
+description = "Full-Stack Developer and Entrepreneur"
+dateFormat = "2006-01-02"
+paginationSinglePost = true
+
+social = [
+    { id = "github", url = "https://github.com/psteinroe" },
+    { id = "email", url = "philipp@steinroetter.com" },
+    { id = "x", url = "https://x.com/psteinroe" },
+    { id = "bluesky", url = "https://bsky.app/psteinroe" }
+]
+
+
+[params.author]
+name = "psteinroe"
+email  = "philipp@steinroetter.com"
+location = "Berlin"
+
+[markup.goldmark.renderer]
+unsafe = true # true | false; Enable unsafe mode to have a better experience
+
+[markup.highlight]
+style = 'base16-snazzy' # Highlight.js style
+
+[pagination]
+pagerSize = 5
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "Blog"
+url = "/posts"
+weight = 2
