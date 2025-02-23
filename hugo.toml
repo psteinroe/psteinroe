@@ -6,6 +6,7 @@ title = "Philipp Steinrötter"
 [params]
 description = "Full-Stack Developer and Entrepreneur"
 dateFormat = "2006-01-02"
+readMore = false
 
 social = [
     { id = "github", url = "https://github.com/psteinroe" },
@@ -35,5 +36,5 @@ weight = 1
 
 [[menu.main]]
 name = "Posts"
-url = "/posts"
+url = "/posts/"
 weight = 2
