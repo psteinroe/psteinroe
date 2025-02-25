@@ -1,6 +1,6 @@
 ---
 title: Postgres Async Triggers
-date: 2025-02-25
+date: 2025-02-24
 draft: false
 description: Implement asynchronous side effects for Postgres events
 author: psteinroe
