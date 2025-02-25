@@ -6,7 +6,6 @@ title: Home
 For announcements, general writing and opinions, check out the [blog](./posts).
 
 
-
 ### Projects
 
 I like to solve my own problems in public.
