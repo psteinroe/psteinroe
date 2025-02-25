@@ -9,6 +9,8 @@ author: psteinroe
 # Postgres Async Triggers
 Run asynchronous side-effects on database events.
 
+> This blog post is accompanied by a demo repository on GitHub. Check it out [here](https://github.com/psteinroe/postgres-async-trigger).
+
 At [hellomateo](https://www.hellomateo.de), we rely heavily on [Supabase](https://supabase.com). And like any SaaS, we need to execute side-effects like sending a Webhook after a record changed. At first, we manually created database triggers that inserted jobs into the Postgres-based queue [Graphile Worker](https://worker.graphile.org) after insert/update/delete. Not only was this a bad DX, we also hit scalability issues: the fetch job query from Graphile Worker dominated our database load, and the maxed out workers were not able to process jobs fast enough during peak times.
 
 ![Async Trigger Before](/images/sideeffects-before.png)
@@ -104,7 +106,6 @@ Here, we move the `when` clauses into `if` clauses, and add the job to the list 
 
 We did a quick proof of concept and the impact was significant.
 
-> [!NOTE]
 > In our very first iteration, we had a single trigger function that used a lot of `execute format` to dynamically build the payloads based on `tg_name` and `tg_op`, but that was even worse than not batching. Turns out, the execution context switch Postgres has to perform with `execute format` is very costly.
 
 Now, how do we fix the DX? The database triggers are boilerplate, and we do not want to require a new migration every time we implement a side-effect anymore.
@@ -137,7 +138,6 @@ export default builder
 
 Any async trigger declares up to three subscriptions on a table: `insert`, `update` and `delete`. Unlike database triggers, each subscription has its own optional `when` clause to filter on old and new. We also enforce the selection of columns to reduce the payload size. The execute function receives a typed event payload as well as globally declared dependencies.
 
-> [!NOTE]
 > The payload types are the only integration with Supabase. Everything else is just plain Postgres and Node.
 
 All functions are registered on the server and collected on startup of the service. Before we start processing jobs, a `set_subscriptions` rpc is called that merges all subscriptions into the `async_trigger.subscription` table:
