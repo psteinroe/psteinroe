@@ -401,9 +401,9 @@ $$ language plpgsql security definer;
 
 Graphile Worker now simply iterates the jobs and forwards them to BullMQ. We use [this canary release](https://github.com/graphile/worker/pull/474) of Graphile Worker that implements local queues to maximise throughput and reduce database load at a theoretical latency cost. But we found that due to our single-digit job processing time and with at least two parallel workers, the downsides are negligible.
 
-![Async Trigger After](/images/sideeffects-after.png)
-
 ## Summary
+
+![Async Trigger After](/images/sideeffects-after.png)
 
 And that’s it for the async triggers! We successfully reduced the load on our database and increased throughput by batching the export jobs and thanks to the local queue mode. The latency is very low too: the BullMQ worker is executed in less than 100ms after the transaction completes on the database. We are also happy with the DX. A new developer should be able to implement business logic quickly. And the best part: we are still using only the simple tools.
 
