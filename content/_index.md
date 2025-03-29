@@ -9,7 +9,7 @@ You can also find a few guest blog posts on various websites:
 
 - [Postgres Language Server: implementing the Parser](https://supabase.com/blog/postgres-language-server-implementing-parser)
 - [Using React Query with Next.js App Router and Supabase Cache Helpers](https://supabase.com/blog/react-query-nextjs-app-router-cache-helpers)
-
+- [Postgres Language Server: Initial Release](https://supabase.com/blog/postgres-language-server)
 
 ### Projects
 
