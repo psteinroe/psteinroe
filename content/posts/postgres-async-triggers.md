@@ -9,7 +9,7 @@ author: psteinroe
 # Postgres Async Triggers
 Run asynchronous side-effects on database events.
 
-> This blog post is accompanied by a demo repository on GitHub. Check it out [here](https://github.com/psteinroe/postgres-async-trigger).
+> This blog post is accompanied by a demo repository on GitHub. Check it out [here](https://github.com/psteinroe/postgres-async-trigger-demo).
 
 At [hellomateo](https://www.hellomateo.de), we rely heavily on [Supabase](https://supabase.com). And like any SaaS, we need to execute side-effects like sending a Webhook after a record changed. At first, we manually created database triggers that inserted jobs into the Postgres-based queue [Graphile Worker](https://worker.graphile.org) after insert/update/delete. Not only was this a bad DX, we also hit scalability issues: the fetch job query from Graphile Worker dominated our database load, and the maxed out workers were not able to process jobs fast enough during peak times.
 
@@ -418,7 +418,7 @@ We did not go this path because at that time queues were not released yet, we do
 
 ## Additional Goodies
 
-This blog post focusses on the async trigger implementation only. But the framework you can find in the demo repository is capable of more. We implemented an abstraction layer on top of BullMQ that allows for a boilerplate-free and type-safe implementation of business logic in a very functional manner. Functions [can call, trigger and schedule other functions](https://github.com/psteinroe/postgres-async-trigger/blob/main/apps/functions-service/src/functions/contact/sample-trigger.ts), and every handler receives globally defined dependencies that are created from the environment in a type-safe way. There is also a [test framework](https://github.com/psteinroe/postgres-async-trigger/blob/main/apps/functions-service/src/functions/contact/sample-trigger.test.ts) to test both triggers and functions. Although a lot of things can still be polished, we are happy with its current status and hope it’s already of value for the community.
+This blog post focusses on the async trigger implementation only. But the framework you can find in the demo repository is capable of more. We implemented an abstraction layer on top of BullMQ that allows for a boilerplate-free and type-safe implementation of business logic in a very functional manner. Functions [can call, trigger and schedule other functions](https://github.com/psteinroe/postgres-async-trigger-demo/blob/main/apps/functions-service/src/functions/contact/sample-trigger.ts), and every handler receives globally defined dependencies that are created from the environment in a type-safe way. There is also a [test framework](https://github.com/psteinroe/postgres-async-trigger-demo/blob/main/apps/functions-service/src/functions/contact/sample-trigger.test.ts) to test both triggers and functions. Although a lot of things can still be polished, we are happy with its current status and hope it’s already of value for the community.
 
 If you want to help build this, we are hiring in Berlin! You can reach me on philipp@hellomateo.de.
 
