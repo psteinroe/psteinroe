@@ -15,13 +15,25 @@ You can also find a few guest blog posts on various websites:
 
 I like to solve my own problems in public.
 
-**[Postgres Language Tools](https://github.com/supabase-community/postgres_lsp)**
+**[Postgres Language Tools](https://github.com/supabase-community/postgres-language-server)**
 
 A Language Server for Postgres
 
 **[Supabase Cache Helpers](https://github.com/psteinroe/supabase-cache-helpers)**
 
 A collection of framework specific Cache utilities for working with Supabase.
+
+**[Postgres Stream](https://github.com/psteinroe/postgres-stream)**
+
+Reliable event streaming from Postgres
+
+**[Postgres Conductor](https://github.com/psteinroe/postgres-conductor)**
+
+Durable execution using only Postgres
+
+**[ninjascale](https://github.com/psteinroe/postgres-conductor)**
+
+Metrics-based autoscaler for managed container platforms
 
 **[Supabase to Zod](https://github.com/psteinroe/supabase-to-zod)**
 
